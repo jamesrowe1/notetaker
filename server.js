@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 
 //Set up the express app
 const app = express();
-const PORT = 9000;
+const PORT = process.env.PORT || 9000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
